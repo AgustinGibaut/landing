@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Agustin Gibaut</title>
   <link rel="stylesheet" href="styles.css"/>
-    <!-- Agregar favicon -->
-    <link rel="icon" href="5852cd5558215f0354495f66.png" type="5852cd5558215f0354495f66.png"/>
+  <!-- Agregar favicon -->
+  <link rel="icon" href="5852cd5558215f0354495f66.png" type="image/png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
@@ -23,47 +23,132 @@
   </header>
 
   <div id="menu-overlay" class="menu-overlay">
+    <div class="menu-bg-symbol">忍</div>
     <nav class="menu-nav">
-      <a href="#">Inicio</a>
-      <a href="#">Proyectos</a>
-      <a href="#">Sobre mí</a>
-      <a href="#">Contacto</a>
+      <a href="#home" class="menu-item">Inicio</a>
+      <a href="#projects" class="menu-item">Proyectos</a>
+      <a href="#" class="menu-item">Sobre mí</a>
+      <a href="#" class="menu-item">Contacto</a>
     </nav>
   </div>
 
   <main>
-    <div class="container">
-      <!-- Ninja Illustration -->
-      <div class="ninja-container">
-        <div class="headband">
-          <div class="headband-plate"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <!-- Ninja Illustration -->
+        <div class="ninja-container">
+          <div class="headband">
+            <div class="headband-plate"></div>
+         
+          </div>
+          <div class="ninja-image">
+            <img src="5852cd5558215f0354495f66.png" alt="Naruto Hokage" class="naruto-img" />
+          </div>
         </div>
-        <div class="ninja-image">
-          <img src="5852cd5558215f0354495f66.png" alt="Naruto Hokage" class="naruto-img" />
-        </div>
-      </div>
 
-      <!-- Text Content -->
-      <div class="content">
-        <div class="title-container">
-          <h1 class="main-title">AGUSTIN</h1>
-          <h1 class="main-title last-name">GIBAUT</h1>
-          <div class="subtitle-container">
-            <span class="subtitle-prefix">Ninja</span>
-            <span class="subtitle-highlight">Developer</span>
-          </div>
-          <p class="description">
-            Dominando el arte del código como un verdadero shinobi. Creando soluciones web con precisión y velocidad ninja.
-          </p>
-          <div class="buttons">
-            <button class="btn btn-primary">Ver Jutsus</button>
-            <button class="btn btn-secondary">Contactar</button>
+        <!-- Text Content -->
+        <div class="content">
+          <div class="title-container">
+            <h1 class="main-title">AGUSTIN</h1>
+            <h1 class="main-title last-name">GIBAUT</h1>
+            <div class="subtitle-container">
+              <span class="subtitle-prefix">Ninja</span>
+              <span class="subtitle-highlight">Developer</span>
+            </div>
+            <p class="description">
+              Dominando el arte del código como un verdadero shinobi. Creando soluciones web con precisión y velocidad ninja.
+            </p>
+            <div class="buttons">
+              <a href="#projects" class="btn btn-primary"><span class="btn-text">Ver Jutsus</span></a>
+              <button class="btn btn-secondary"><span class="btn-text">Contactar</span></button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
    
+       
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="section-header">
+        <h2 class="section-title">Mis <span class="highlight">Jutsus</span></h2>
+        <p class="section-subtitle">Técnicas ninja que he dominado</p>
+      </div>
+
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <div class="chakra-glow"></div>
+            <img src="WhatsApp Image 2025-04-25 at 5.11.37 PM (1).jpeg" alt="Proyecto 1" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Caluladorita</h3>
+            <p class="project-description">aplicacion web basada en steamcito, en la cual te convierte de usd a pesos argentinos cuanto te saldra el juego.</p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JAVASCRIPT</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">Ver Demo</a>
+              <a href="#" class="project-link">Ver Código</a>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <!-- Social Media Section -->
+<section id="social-media" class="social-media-section">
+  <div class="section-header">
+    <h2 class="section-title">Mis <span class="highlight">Redes</span></h2>
+    <p class="section-subtitle">Conéctate conmigo en el mundo ninja digital</p>
+  </div>
+
+  <div class="social-icons-container">
+    <a href="https://github.com" target="_blank" class="social-icon-wrapper odd">
+      <div class="social-icon github">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </div>
+      <span class="social-name">GitHub</span>
+    </a>
+
+    <a href="https://linkedin.com" target="_blank" class="social-icon-wrapper even">
+      <div class="social-icon linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </div>
+      <span class="social-name">LinkedIn</span>
+    </a>
+
+    <a href="https://twitter.com" target="_blank" class="social-icon-wrapper odd">
+      <div class="social-icon twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+      </div>
+      <span class="social-name">Twitter</span>
+    </a>
+
+    <a href="https://instagram.com" target="_blank" class="social-icon-wrapper even">
+      <div class="social-icon instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </div>
+      <span class="social-name">Instagram</span>
+    </a>
+
+    <a href="mailto:example@email.com" class="social-icon-wrapper odd">
+      <div class="social-icon email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </div>
+      <span class="social-name">Email</span>
+    </a>
+  </div>
+</section>
+  </main>
 
   <!-- Elementos decorativos -->
   <div class="decorative-elements">
@@ -71,6 +156,13 @@
     <div class="kunai-2"></div>
     <div class="shuriken-1"></div>
     <div class="shuriken-2"></div>
+  </div>
+
+  <!-- Chakra background -->
+  <div class="chakra-background">
+    <div class="chakra-circle chakra-circle-1"></div>
+    <div class="chakra-circle chakra-circle-2"></div>
+    <div class="chakra-circle chakra-circle-3"></div>
   </div>
 
   <!-- Partículas -->

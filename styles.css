@@ -71,7 +71,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: #63615f; /* Naranja */
+    background: #63615f; 
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.5s ease-out;
@@ -892,3 +892,476 @@
       transform: translateX(0);
     }
   }
+
+  .projects-section {
+    padding: 6rem 1.5rem;
+    background-color: rgba(10, 23, 78, 0.1);
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title .highlight {
+    color: var(--naruto-orange);
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--naruto-orange);
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background-color: rgba(26, 26, 26, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+  }
+  
+  .project-card:nth-child(1) { animation-delay: 0.2s; }
+  .project-card:nth-child(2) { animation-delay: 0.4s; }
+  .project-card:nth-child(3) { animation-delay: 0.6s; }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 120, 0, 0.2);
+  }
+  
+  .project-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .project-card:hover .project-image img {
+    transform: scale(1.1);
+  }
+  
+  .chakra-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, var(--naruto-orange) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .project-card:hover .chakra-glow {
+    opacity: 0.3;
+    animation: pulse-chakra 2s infinite alternate;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--naruto-orange);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .project-title::before {
+    content: '忍';
+    position: absolute;
+    font-size: 0.8rem;
+    top: -10px;
+    left: -15px;
+    opacity: 0.5;
+    color: var(--naruto-orange);
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tag {
+    background-color: rgba(255, 120, 0, 0.2);
+    color: var(--naruto-orange);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .tag:hover {
+    background-color: rgba(255, 120, 0, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .project-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--naruto-orange);
+    transition: width 0.3s;
+  }
+  
+  .project-link:hover {
+    color: var(--naruto-orange);
+  }
+  
+  .project-link:hover::after {
+    width: 100%;
+  }
+  
+
+  .projects-section::before,
+  .projects-section::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    background-color: #888;
+    border-radius: 0 0 2px 2px;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .projects-section::before {
+    top: 10%;
+    left: 5%;
+    transform: rotate(30deg);
+  }
+  
+  .projects-section::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 20px;
+    height: 7px;
+    background-color: var(--naruto-orange);
+    border-radius: 2px;
+  }
+  
+  .projects-section::after {
+    bottom: 10%;
+    right: 5%;
+    transform: rotate(-30deg);
+  }
+  
+  /* Scroll reveal animation */
+  @keyframes reveal-from-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles for projects section */
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+    }
+    
+    .project-card {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Chakra pulse animation for project cards */
+  @keyframes pulse-chakra {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+
+
+.social-media-section {
+  padding: 6rem 1.5rem;
+  background-color: rgba(10, 23, 78, 0.05);
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.social-media-section::before {
+  content: '忍';
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.03;
+  color: var(--naruto-orange);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+}
+
+.social-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.5s, filter 0.5s;
+  position: relative;
+  perspective: 1000px;
+}
+
+
+.social-icon-wrapper.odd {
+  transform: perspective(1000px) rotateY(-15deg);
+}
+
+.social-icon-wrapper.even {
+  transform: perspective(1000px) rotateY(15deg);
+}
+
+.social-icon-wrapper.odd:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.1);
+}
+
+.social-icon-wrapper.even:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.1);
+}
+
+.social-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--naruto-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--naruto-orange) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-icon-wrapper:hover .social-icon::before {
+  opacity: 0.3;
+  animation: pulse-chakra 2s infinite alternate;
+}
+
+.social-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--naruto-orange);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon-wrapper:hover .social-icon svg {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.social-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ccc;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.social-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background-color: var(--naruto-orange);
+  transition: transform 0.3s;
+}
+
+.social-icon-wrapper:hover .social-name {
+  color: var(--naruto-orange);
+}
+
+.social-icon-wrapper:hover .social-name::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Efectos de chakra para los iconos */
+.social-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.social-icon-wrapper:hover .social-icon::after {
+  border-color: var(--naruto-orange);
+  animation: rotate-border 2s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animación de aparición */
+.social-icon-wrapper {
+  opacity: 0;
+  animation: fade-in-up 0.7s forwards;
+}
+
+.social-icon-wrapper:nth-child(1) { animation-delay: 0.1s; }
+.social-icon-wrapper:nth-child(2) { animation-delay: 0.2s; }
+.social-icon-wrapper:nth-child(3) { animation-delay: 0.3s; }
+.social-icon-wrapper:nth-child(4) { animation-delay: 0.4s; }
+.social-icon-wrapper:nth-child(5) { animation-delay: 0.5s; }
+
+/* Kunai decorations for social media section */
+.social-media-section::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 20px;
+  height: 70px;
+  background-color: #888;
+  transform: rotate(-30deg);
+  border-radius: 0 0 2px 2px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.social-media-section::after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 20px;
+  height: 7px;
+  background-color: var(--naruto-orange);
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .social-icons-container {
+    gap: 2rem;
+  }
+  
+  .social-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .social-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
